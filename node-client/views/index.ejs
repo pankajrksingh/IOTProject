@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="iotproject">
+<head>
+	<title>IOT-Project</title>
+	
+	<% include ./partials/sources %>
+
+</head>
+<body>
+	
+	<div class="container-fluid login" ng-controller = "LoginCtrl" ng-init = "getInitData()">
+	<div class="row">
+		<nav class="navbar navbar-inverse">
+			<form name="loginForm" class="navbar-form navbar-right" ng-submit="login()" style="margin-right:1%;">
+  			<div class="form-group">
+  				<div class="row">
+  					<!-- <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" ng-model="username" placeholder="Email">
+    				<input type="text" ng-minlength="6" class="form-control" ng-model="password" placeholder="Password"> -->
+  					<button type="submit" class="btn btn-default">Login with Google</button>	
+  				</div>
+  			</div>
+		</form>
+		</nav>
+	</div>	
+	<div class="row" ng-show="alert.length > 0">
+		<alert ng-repeat="alert in alerts" type="danger">{{alert.msg}}</alert>
+	</div>
+	<div class="row">
+		<div class="span6" style="margin-top:2%;" >
+			<!-- <div id="lineChartDiv">
+				<line-chart>
+					<svg></svg>
+				</line-chart>
+			</div> -->
+			<div id="line_chart" style="width: 900px; height: 500px">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

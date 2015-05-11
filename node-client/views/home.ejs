@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="iotproject">
+<head>
+	<title>IOT-Project</title>
+	
+	<% include ./partials/sources %>
+
+</head>
+<body background-color="#eeeeee">
+	<div class="container-fluid login" ng-controller = "HomeCtrl" ng-init = "initHome('<%= user.displayName %>')">
+	<div class="row">
+		<nav class="navbar navbar-inverse">
+		<form name="loginForm" class="navbar-form navbar-right" ng-submit="login()" style="margin-right:1%;">
+		<div class="form-group">
+  				<div class="row" style="color: azure;">
+  					{{username}}
+  					<!-- <button type="button" class="btn btn-primary" ng-click="logout()">Logout</button> -->				
+  					<span class="glyphicon glyphicon-log-out" ng-click="logout()" style="cursor:pointer;font-size:medium;"></span>
+  				</div>
+  			</div>
+		</form>
+		</nav>
+	</div>	
+	<div class="row" style="height:40%;width: 90%;margin: auto;" >
+		<div class="span6" style="height:95%;">
+			<div id="temp_hum_line_chart" style="width: 99%; height: 98%;"></div>
+		</div>
+		<div class="span6" style="height:90%">
+			<div id="temp_gauge_div" style="width: 55%; height: 95%;margin:auto;"></div>
+		</div>
+	</div>
+	<div class="row" style="height:40%;width: 90%;margin: auto;margin-top: 1%;">
+		<div class="span6" style="height:95%">
+			<div id="nh3_chart_div" style="width: 99%; height: 98%;"></div>
+		</div>
+		<div class="span6" style="height:95%">
+			<div id="co2_chart_div" style="width: 99%; height: 98%;"></div>
+		</div>
+	</div>
+</body>
+</html>
+
