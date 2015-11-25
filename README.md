@@ -1,5 +1,5 @@
 # IOTProject
-IOT Project for course 273
+IOT Project for course 272
 
 1. Our IoT Application for detection of concentration of gas is aimed towards analysing gas concentration in a given air sample. 
 2. The main goal of this application is to provide statistics of concentration count in the air and based on our statistics notify the users of the effects of increase or decrease for the gas percentage . 
